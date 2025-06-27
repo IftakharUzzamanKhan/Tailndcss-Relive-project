@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="en" webcrx=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <script src="./2Assignment 4_files/browser@4"></script><style>/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-orange-600: oklch(64.6% 0.222 41.116);
+    --color-sky-400: oklch(74.6% 0.16 232.661);
+    --color-sky-500: oklch(68.5% 0.169 237.323);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --radius-sm: 0.25rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
+  .order-3 {
+    order: 3;
+  }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .mx-6 {
+    margin-inline: calc(var(--spacing) * 6);
+  }
+  .my-1 {
+    margin-block: calc(var(--spacing) * 1);
+  }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .size-3 {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .h-22 {
+    height: calc(var(--spacing) * 22);
+  }
+  .h-70 {
+    height: calc(var(--spacing) * 70);
+  }
+  .h-80 {
+    height: calc(var(--spacing) * 80);
+  }
+  .h-full {
+    height: 100%;
+  }
+  .min-h-full {
+    min-height: 100%;
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .min-w-full {
+    min-width: 100%;
+  }
+  .-translate-y-3\.5 {
+    --tw-translate-y: calc(var(--spacing) * -3.5);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .animate-ping {
+    animation: var(--animate-ping);
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-items-center {
+    justify-items: center;
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-\[\#00c2b8\] {
+    border-color: #00c2b8;
+  }
+  .bg-\[\#00c2b8\] {
+    background-color: #00c2b8;
+  }
+  .bg-\[\#f7f7f7\] {
+    background-color: #f7f7f7;
+  }
+  .bg-orange-600 {
+    background-color: var(--color-orange-600);
+  }
+  .bg-sky-400 {
+    background-color: var(--color-sky-400);
+  }
+  .bg-sky-500 {
+    background-color: var(--color-sky-500);
+  }
+  .bg-\[url\(\.\/assets\/banner\.png\)\] {
+    background-image: url(./assets/banner.png);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-12 {
+    padding: calc(var(--spacing) * 12);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .px-20 {
+    padding-inline: calc(var(--spacing) * 20);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
+  }
+  .text-\[25px\] {
+    font-size: 25px;
+  }
+  .text-\[30px\] {
+    font-size: 30px;
+  }
+  .font-\[600\] {
+    --tw-font-weight: 600;
+    font-weight: 600;
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-\[\#00c2b8\] {
+    color: #00c2b8;
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .opacity-75 {
+    opacity: 75%;
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:border-b-3 {
+    &:hover {
+      @media (hover: hover) {
+        border-bottom-style: var(--tw-border-style);
+        border-bottom-width: 3px;
+      }
+    }
+  }
+  .hover\:font-bold {
+    &:hover {
+      @media (hover: hover) {
+        --tw-font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-bold);
+      }
+    }
+  }
+  .hover\:text-\[\#00c2b8\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #00c2b8;
+      }
+    }
+  }
+  .sm\:my-24 {
+    @media (width >= 40rem) {
+      margin-block: calc(var(--spacing) * 24);
+    }
+  }
+  .sm\:h-15 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 15);
+    }
+  }
+  .sm\:h-90 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 90);
+    }
+  }
+  .sm\:h-105 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 105);
+    }
+  }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .sm\:p-8 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 8);
+    }
+  }
+  .sm\:py-20 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .sm\:pl-5 {
+    @media (width >= 40rem) {
+      padding-left: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:text-\[13px\] {
+    @media (width >= 40rem) {
+      font-size: 13px;
+    }
+  }
+  .sm\:text-\[15px\] {
+    @media (width >= 40rem) {
+      font-size: 15px;
+    }
+  }
+  .sm\:text-\[18px\] {
+    @media (width >= 40rem) {
+      font-size: 18px;
+    }
+  }
+  .sm\:text-\[22px\] {
+    @media (width >= 40rem) {
+      font-size: 22px;
+    }
+  }
+  .sm\:text-\[28px\] {
+    @media (width >= 40rem) {
+      font-size: 28px;
+    }
+  }
+  .sm\:text-\[30px\] {
+    @media (width >= 40rem) {
+      font-size: 30px;
+    }
+  }
+  .sm\:text-\[40px\] {
+    @media (width >= 40rem) {
+      font-size: 40px;
+    }
+  }
+  .sm\:text-\[50px\] {
+    @media (width >= 40rem) {
+      font-size: 50px;
+    }
+  }
+  .md\:order-none {
+    @media (width >= 48rem) {
+      order: 0;
+    }
+  }
+  .md\:mx-12 {
+    @media (width >= 48rem) {
+      margin-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:my-0 {
+    @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:my-5 {
+    @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:mb-0 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:h-12 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:h-18 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 18);
+    }
+  }
+  .md\:h-140 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 140);
+    }
+  }
+  .md\:h-175 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 175);
+    }
+  }
+  .md\:w-12 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:w-70 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 70);
+    }
+  }
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:p-8 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:px-3 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:px-4 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:px-12 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:px-20 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:py-0 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:py-3 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:py-10 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:py-20 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:pl-9 {
+    @media (width >= 48rem) {
+      padding-left: calc(var(--spacing) * 9);
+    }
+  }
+  .md\:text-3xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
+  .md\:text-\[15px\] {
+    @media (width >= 48rem) {
+      font-size: 15px;
+    }
+  }
+  .md\:text-\[25px\] {
+    @media (width >= 48rem) {
+      font-size: 25px;
+    }
+  }
+  .md\:text-\[35px\] {
+    @media (width >= 48rem) {
+      font-size: 35px;
+    }
+  }
+  .md\:text-\[50px\] {
+    @media (width >= 48rem) {
+      font-size: 50px;
+    }
+  }
+  .md\:text-\[60px\] {
+    @media (width >= 48rem) {
+      font-size: 60px;
+    }
+  }
+  .lg\:h-14 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 14);
+    }
+  }
+  .lg\:h-25 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 25);
+    }
+  }
+  .lg\:h-80 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 80);
+    }
+  }
+  .lg\:h-160 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 160);
+    }
+  }
+  .lg\:h-190 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 190);
+    }
+  }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .lg\:p-4 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 4);
+    }
+  }
+  .lg\:px-16 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:px-30 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 30);
+    }
+  }
+  .lg\:py-5 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:py-20 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:py-25 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 25);
+    }
+  }
+  .lg\:pl-9 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 9);
+    }
+  }
+  .lg\:text-\[17px\] {
+    @media (width >= 64rem) {
+      font-size: 17px;
+    }
+  }
+  .lg\:text-\[18px\] {
+    @media (width >= 64rem) {
+      font-size: 18px;
+    }
+  }
+  .lg\:text-\[20px\] {
+    @media (width >= 64rem) {
+      font-size: 20px;
+    }
+  }
+  .lg\:text-\[30px\] {
+    @media (width >= 64rem) {
+      font-size: 30px;
+    }
+  }
+  .lg\:text-\[40px\] {
+    @media (width >= 64rem) {
+      font-size: 40px;
+    }
+  }
+  .lg\:text-\[60px\] {
+    @media (width >= 64rem) {
+      font-size: 60px;
+    }
+  }
+  .lg\:text-\[70px\] {
+    @media (width >= 64rem) {
+      font-size: 70px;
+    }
+  }
+  .lg\:text-\[80px\] {
+    @media (width >= 64rem) {
+      font-size: 80px;
+    }
+  }
+  .xl\:h-\[calc\(100vh-96px\)\] {
+    @media (width >= 80rem) {
+      height: calc(100vh - 96px);
+    }
+  }
+  .xl\:px-6 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .xl\:py-5 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 5);
+    }
+  }
+  .xl\:py-25 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 25);
+    }
+  }
+  .xl\:text-\[20px\] {
+    @media (width >= 80rem) {
+      font-size: 20px;
+    }
+  }
+  .xl\:text-\[25px\] {
+    @media (width >= 80rem) {
+      font-size: 25px;
+    }
+  }
+  .xl\:text-\[100px\] {
+    @media (width >= 80rem) {
+      font-size: 100px;
+    }
+  }
+  .\32 xl\:my-5 {
+    @media (width >= 96rem) {
+      margin-block: calc(var(--spacing) * 5);
+    }
+  }
+  .\32 xl\:my-30 {
+    @media (width >= 96rem) {
+      margin-block: calc(var(--spacing) * 30);
+    }
+  }
+  .\32 xl\:mt-6 {
+    @media (width >= 96rem) {
+      margin-top: calc(var(--spacing) * 6);
+    }
+  }
+  .\32 xl\:h-95 {
+    @media (width >= 96rem) {
+      height: calc(var(--spacing) * 95);
+    }
+  }
+  .\32 xl\:w-120 {
+    @media (width >= 96rem) {
+      width: calc(var(--spacing) * 120);
+    }
+  }
+  .\32 xl\:px-15 {
+    @media (width >= 96rem) {
+      padding-inline: calc(var(--spacing) * 15);
+    }
+  }
+  .\32 xl\:px-20 {
+    @media (width >= 96rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .\32 xl\:py-10 {
+    @media (width >= 96rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .\32 xl\:py-30 {
+    @media (width >= 96rem) {
+      padding-block: calc(var(--spacing) * 30);
+    }
+  }
+  .\32 xl\:text-\[20px\] {
+    @media (width >= 96rem) {
+      font-size: 20px;
+    }
+  }
+  .\32 xl\:text-\[28px\] {
+    @media (width >= 96rem) {
+      font-size: 28px;
+    }
+  }
+  .\32 xl\:text-\[90px\] {
+    @media (width >= 96rem) {
+      font-size: 90px;
+    }
+  }
+  .\32 xl\:text-\[100px\] {
+    @media (width >= 96rem) {
+      font-size: 100px;
+    }
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+    }
+  }
+}
+</style><script src="blob:https://shikhon00.github.io/66fc2819-ed35-4e6e-ac78-21ee0ac14d6e"></script>
+</head>
+<body>
+<header class="flex flex-col md:flex-row justify-between mx-2 md:mx-12 text-center items-center my-2 md:my-5">
+    <div class="order-1 md:order-none mb-2 md:mb-0">
+        <img class="h-8  lg:h-14" src="./2Assignment 4_files/logo.png" alt="Logo">
+    </div>
+    <nav class="order-3 md:order-none w-full md:w-auto my-2 md:my-0">
+        <ul class="flex  text-center justify-center">
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Services</a></li>
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">About Us</a></li>
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Home</a></li>
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Contact</a></li>
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Log Out</a></li>
+        </ul>
+    </nav>
+    <div class="order-2 md:order-none bg-orange-600 h-10 w-10 md:h-12 md:w-12 flex justify-center items-center rounded-full text-white text-2xl md:text-3xl border-2 font-semibold border-[#00c2b8]">
+        <p class="ml-3 mb-2"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">m</a></p> 
+        <span class="relative flex size-3">
+            <span class="absolute inline-flex -translate-y-3.5 h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+            <span class="relative inline-flex -translate-y-3.5 size-3 rounded-full bg-sky-500"></span>
+        </span>
+    </div>
+</header>
+
+<!-- ----------------banner---------- -->
+
+<section class="bg-[url(./assets/banner.png)] bg-cover h-80 sm:h-105 md:h-140 lg:h-160 xl:h-[calc(100vh-96px)] grid grid-cols-2  text-white py-5 md:py-10 lg:py-20 xl:py-25
+px-5 md:px-12">
+    <div><h1 class="font-semibold text-[30px] sm:text-[50px] md:text-[60px] lg:text-[80px] xl:text-[100px]">Rediscover Youth,<span class="text-[#00c2b8]">Redefine <br>Life.</span></h1>
+    <p class="py-2 md:py-3 xl:py-5 text-[10px] sm:text-[13px] md:text-[15px] xl:text-[20px]">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero iscum cupiditate, illum quisquam consequuntur. Tempora possimus ipsum officiis distinctio similique. Sit reprehender pariatur aperiam distinctio? Assumenda laboriosam voluptas fuga?
+    </p>
+   <button class="bg-[#00c2b8] text-white py-2 px-2 xl:py-5 xl:px-6 rounded-full my-1 md:my-5 text-[12px] md:text-[15px] lg:text-[20px] xl:text-[25px] font-[600]"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Contuct Us</a> </button>
+</div>
+</section>
+<!-- -------------------relive--------------- -->
+
+<section class=" my-10 mx-6 sm:my-24 2xl:my-30 2xl:px-15 grid grid-cols-1 sm:grid-cols-2 items-center">
+    <div>
+<img class="min-w-full" src="./2Assignment 4_files/MeetRelive.png" alt="">
+    </div>
+    <div class=" py-5 sm:pl-5 md:pl-9 lg:pl-9 2xl:px-20 ">
+<h2 class="text-[25px] sm:text-[40px] md:text-[50px] lg:text-[60px] 2xl:text-[90px] font-[600]">Meet <span class="text-[#00c2b8]">Relive</span></h2>
+<p class="text-[11px] sm:text-[13px] md:text-[15px] lg:text-[20px] 2xl:text-[28px]  md:py-3 lg:py-5 2xl:py-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ext cumque umenda deleniti at illo is a quibusdam! Aperiam, iure. Repellat, esse adipisci extral is tenetur, voluptatum facere inventore odit, totam cupiditate dolorum sit?</p>
+ <button class="bg-[#00c2b8] text-white py-2 px-2 xl:py-5 xl:px-6 rounded-full my-1  2xl:my-5 text-[12px] md:text-[15px] lg:text-[20px] xl:text-[25px] font-[600]"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Contuct Us</a> </button>
+    </div>
+</section>
+
+<!-- ----------------cart------------ -->
+ <section class="px-10">
+    <div class="flex-row justify-items-center">
+<h2 class="text-[30px] sm:text-[50px] md:text-[60px] lg:text-[70px] 2xl:text-[100px] font-[600]">Meet <span class="text-[#00c2b8]">Relive</span></h2>
+<p class="text-[11px] sm:text-[15px] md:text-[15px] lg:text-[18px] 2xl:text-[20px] text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque assumenda deleniti at illo quibusdam! Aperiam. <br>Ex cumque assumenda deleniti at illo quibusdam! Aperiam.</p></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-5 sm:py-20  2xl:py-30">
+    
+    <div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./2Assignment 4_files/immigrant.jpeg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+   <div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./2Assignment 4_files/visa.jpg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+<div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./2Assignment 4_files/tourist.jpeg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+<div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./2Assignment 4_files/education.jpg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+<div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./2Assignment 4_files/education.jpg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+<div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./2Assignment 4_files/visa.jpg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+ </div></section>
+
+ <!-- ---------------treatments------------- -->
+  <section>
+    <div class=" flex-col justify-items-center">
+        <h2 class="text-[25px] sm:text-[40px] md:text-[50px] lg:text-[80px]  2xl:text-[90px] font-[600]">Our Sprcialized <span class="text-[#00c2b8]">Treatments</span></h2>
+        <p class="text-[11px] sm:text-[13px] md:text-[15px] lg:text-[20px] font-[600]">Perspiciatis enim dolores in aliquid facilis molestias</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-10 md:py-20 lg:py-25 px-8 md:px-20 lg:px-30">
+        <div class="shadow-2xl bg-[#f7f7f7] p-12 rounded-2xl">
+            <img class="h-22" src="./2Assignment 4_files/pot.png" alt="">
+            <h3 class="text-[18px] sm:text-[22px] md:text-[25px] lg:text-[30px] font-[600] py-5">Peptide Therapy</h3>
+            <p class="text-[13px] sm:text-[18px] lg:text-[20px] font-[600]">Boost cellular regeneration and vitality.</p>
+            <a class="text-[#00c2b8] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] underline flex font-[600]" href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Learn More <img class="md:px-3  lg:p-4 h-12 sm:h-15 md:h-18 lg:h-25" src="./Assignment 4_files/arrow.png" alt=""></a>
+        </div>
+        <div class="shadow-2xl bg-[#f7f7f7] p-12 rounded-2xl">
+            <img class="h-22" src="./2Assignment 4_files/harts.png" alt="">
+            <h3 class="text-[18px] sm:text-[22px] md:text-[25px] lg:text-[30px] font-[600] py-5">Peptide Therapy</h3>
+            <p class="text-[13px] sm:text-[18px] lg:text-[20px] font-[600]">Boost cellular regeneration and vitality.</p>
+            <a class="text-[#00c2b8] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] underline flex font-[600]" href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Learn More <img class="md:px-3  lg:p-4 h-12 sm:h-15 md:h-18 lg:h-25" src="./Assignment 4_files/arrow.png" alt=""></a>
+        </div>
+        <div class="shadow-2xl bg-[#f7f7f7] p-12 rounded-2xl">
+             <img class="h-22" src="./2Assignment 4_files/sun.png" alt="">
+            <h3 class="text-[18px] sm:text-[22px] md:text-[25px] lg:text-[30px] font-[600] py-5">Peptide Therapy</h3>
+            <p class="text-[13px] sm:text-[18px] lg:text-[20px] font-[600]">Boost cellular regeneration and vitality.</p>
+            <a class="text-[#00c2b8] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] underline flex font-[600]" href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Learn More <img class="md:px-3  lg:p-4 h-12 sm:h-15 md:h-18 lg:h-25" src="./Assignment 4_files/arrow.png" alt=""></a>
+        </div>
+        
+    </div>
+  </section>
+
+  <section>
+   
+  </section>
+
+</body></html><!DOCTYPE html>
+<!-- saved from url=(0207)https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw -->
+<html lang="en" webcrx=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <script src="./Assignment 4_files/browser@4"></script><style>/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-orange-600: oklch(64.6% 0.222 41.116);
+    --color-sky-400: oklch(74.6% 0.16 232.661);
+    --color-sky-500: oklch(68.5% 0.169 237.323);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --radius-sm: 0.25rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
+  .order-3 {
+    order: 3;
+  }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .mx-6 {
+    margin-inline: calc(var(--spacing) * 6);
+  }
+  .my-1 {
+    margin-block: calc(var(--spacing) * 1);
+  }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .size-3 {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .h-22 {
+    height: calc(var(--spacing) * 22);
+  }
+  .h-70 {
+    height: calc(var(--spacing) * 70);
+  }
+  .h-80 {
+    height: calc(var(--spacing) * 80);
+  }
+  .h-full {
+    height: 100%;
+  }
+  .min-h-full {
+    min-height: 100%;
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .min-w-full {
+    min-width: 100%;
+  }
+  .-translate-y-3\.5 {
+    --tw-translate-y: calc(var(--spacing) * -3.5);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .animate-ping {
+    animation: var(--animate-ping);
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-items-center {
+    justify-items: center;
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-\[\#00c2b8\] {
+    border-color: #00c2b8;
+  }
+  .bg-\[\#00c2b8\] {
+    background-color: #00c2b8;
+  }
+  .bg-\[\#f7f7f7\] {
+    background-color: #f7f7f7;
+  }
+  .bg-orange-600 {
+    background-color: var(--color-orange-600);
+  }
+  .bg-sky-400 {
+    background-color: var(--color-sky-400);
+  }
+  .bg-sky-500 {
+    background-color: var(--color-sky-500);
+  }
+  .bg-\[url\(\.\/assets\/banner\.png\)\] {
+    background-image: url(./assets/banner.png);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-12 {
+    padding: calc(var(--spacing) * 12);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .px-20 {
+    padding-inline: calc(var(--spacing) * 20);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
+  }
+  .text-\[25px\] {
+    font-size: 25px;
+  }
+  .text-\[30px\] {
+    font-size: 30px;
+  }
+  .font-\[600\] {
+    --tw-font-weight: 600;
+    font-weight: 600;
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-\[\#00c2b8\] {
+    color: #00c2b8;
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .opacity-75 {
+    opacity: 75%;
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:border-b-3 {
+    &:hover {
+      @media (hover: hover) {
+        border-bottom-style: var(--tw-border-style);
+        border-bottom-width: 3px;
+      }
+    }
+  }
+  .hover\:font-bold {
+    &:hover {
+      @media (hover: hover) {
+        --tw-font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-bold);
+      }
+    }
+  }
+  .hover\:text-\[\#00c2b8\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #00c2b8;
+      }
+    }
+  }
+  .sm\:my-24 {
+    @media (width >= 40rem) {
+      margin-block: calc(var(--spacing) * 24);
+    }
+  }
+  .sm\:h-15 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 15);
+    }
+  }
+  .sm\:h-90 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 90);
+    }
+  }
+  .sm\:h-105 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 105);
+    }
+  }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .sm\:p-8 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 8);
+    }
+  }
+  .sm\:py-20 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .sm\:pl-5 {
+    @media (width >= 40rem) {
+      padding-left: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:text-\[13px\] {
+    @media (width >= 40rem) {
+      font-size: 13px;
+    }
+  }
+  .sm\:text-\[15px\] {
+    @media (width >= 40rem) {
+      font-size: 15px;
+    }
+  }
+  .sm\:text-\[18px\] {
+    @media (width >= 40rem) {
+      font-size: 18px;
+    }
+  }
+  .sm\:text-\[22px\] {
+    @media (width >= 40rem) {
+      font-size: 22px;
+    }
+  }
+  .sm\:text-\[28px\] {
+    @media (width >= 40rem) {
+      font-size: 28px;
+    }
+  }
+  .sm\:text-\[30px\] {
+    @media (width >= 40rem) {
+      font-size: 30px;
+    }
+  }
+  .sm\:text-\[40px\] {
+    @media (width >= 40rem) {
+      font-size: 40px;
+    }
+  }
+  .sm\:text-\[50px\] {
+    @media (width >= 40rem) {
+      font-size: 50px;
+    }
+  }
+  .md\:order-none {
+    @media (width >= 48rem) {
+      order: 0;
+    }
+  }
+  .md\:mx-12 {
+    @media (width >= 48rem) {
+      margin-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:my-0 {
+    @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:my-5 {
+    @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:mb-0 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:h-12 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:h-18 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 18);
+    }
+  }
+  .md\:h-140 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 140);
+    }
+  }
+  .md\:h-175 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 175);
+    }
+  }
+  .md\:w-12 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:w-70 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 70);
+    }
+  }
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:p-8 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:px-3 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:px-4 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:px-12 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:px-20 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:py-0 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:py-3 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:py-10 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:py-20 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:pl-9 {
+    @media (width >= 48rem) {
+      padding-left: calc(var(--spacing) * 9);
+    }
+  }
+  .md\:text-3xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
+  .md\:text-\[15px\] {
+    @media (width >= 48rem) {
+      font-size: 15px;
+    }
+  }
+  .md\:text-\[25px\] {
+    @media (width >= 48rem) {
+      font-size: 25px;
+    }
+  }
+  .md\:text-\[35px\] {
+    @media (width >= 48rem) {
+      font-size: 35px;
+    }
+  }
+  .md\:text-\[50px\] {
+    @media (width >= 48rem) {
+      font-size: 50px;
+    }
+  }
+  .md\:text-\[60px\] {
+    @media (width >= 48rem) {
+      font-size: 60px;
+    }
+  }
+  .lg\:h-14 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 14);
+    }
+  }
+  .lg\:h-25 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 25);
+    }
+  }
+  .lg\:h-80 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 80);
+    }
+  }
+  .lg\:h-160 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 160);
+    }
+  }
+  .lg\:h-190 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 190);
+    }
+  }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .lg\:p-4 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 4);
+    }
+  }
+  .lg\:px-16 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:px-30 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 30);
+    }
+  }
+  .lg\:py-5 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:py-20 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:py-25 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 25);
+    }
+  }
+  .lg\:pl-9 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 9);
+    }
+  }
+  .lg\:text-\[17px\] {
+    @media (width >= 64rem) {
+      font-size: 17px;
+    }
+  }
+  .lg\:text-\[18px\] {
+    @media (width >= 64rem) {
+      font-size: 18px;
+    }
+  }
+  .lg\:text-\[20px\] {
+    @media (width >= 64rem) {
+      font-size: 20px;
+    }
+  }
+  .lg\:text-\[30px\] {
+    @media (width >= 64rem) {
+      font-size: 30px;
+    }
+  }
+  .lg\:text-\[40px\] {
+    @media (width >= 64rem) {
+      font-size: 40px;
+    }
+  }
+  .lg\:text-\[60px\] {
+    @media (width >= 64rem) {
+      font-size: 60px;
+    }
+  }
+  .lg\:text-\[70px\] {
+    @media (width >= 64rem) {
+      font-size: 70px;
+    }
+  }
+  .lg\:text-\[80px\] {
+    @media (width >= 64rem) {
+      font-size: 80px;
+    }
+  }
+  .xl\:h-\[calc\(100vh-96px\)\] {
+    @media (width >= 80rem) {
+      height: calc(100vh - 96px);
+    }
+  }
+  .xl\:px-6 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .xl\:py-5 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 5);
+    }
+  }
+  .xl\:py-25 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 25);
+    }
+  }
+  .xl\:text-\[20px\] {
+    @media (width >= 80rem) {
+      font-size: 20px;
+    }
+  }
+  .xl\:text-\[25px\] {
+    @media (width >= 80rem) {
+      font-size: 25px;
+    }
+  }
+  .xl\:text-\[100px\] {
+    @media (width >= 80rem) {
+      font-size: 100px;
+    }
+  }
+  .\32 xl\:my-5 {
+    @media (width >= 96rem) {
+      margin-block: calc(var(--spacing) * 5);
+    }
+  }
+  .\32 xl\:my-30 {
+    @media (width >= 96rem) {
+      margin-block: calc(var(--spacing) * 30);
+    }
+  }
+  .\32 xl\:mt-6 {
+    @media (width >= 96rem) {
+      margin-top: calc(var(--spacing) * 6);
+    }
+  }
+  .\32 xl\:h-95 {
+    @media (width >= 96rem) {
+      height: calc(var(--spacing) * 95);
+    }
+  }
+  .\32 xl\:w-120 {
+    @media (width >= 96rem) {
+      width: calc(var(--spacing) * 120);
+    }
+  }
+  .\32 xl\:px-15 {
+    @media (width >= 96rem) {
+      padding-inline: calc(var(--spacing) * 15);
+    }
+  }
+  .\32 xl\:px-20 {
+    @media (width >= 96rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .\32 xl\:py-10 {
+    @media (width >= 96rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .\32 xl\:py-30 {
+    @media (width >= 96rem) {
+      padding-block: calc(var(--spacing) * 30);
+    }
+  }
+  .\32 xl\:text-\[20px\] {
+    @media (width >= 96rem) {
+      font-size: 20px;
+    }
+  }
+  .\32 xl\:text-\[28px\] {
+    @media (width >= 96rem) {
+      font-size: 28px;
+    }
+  }
+  .\32 xl\:text-\[90px\] {
+    @media (width >= 96rem) {
+      font-size: 90px;
+    }
+  }
+  .\32 xl\:text-\[100px\] {
+    @media (width >= 96rem) {
+      font-size: 100px;
+    }
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+    }
+  }
+}
+</style><script src="blob:https://shikhon00.github.io/66fc2819-ed35-4e6e-ac78-21ee0ac14d6e"></script>
+</head>
+<body>
+<header class="flex flex-col md:flex-row justify-between mx-2 md:mx-12 text-center items-center my-2 md:my-5">
+    <div class="order-1 md:order-none mb-2 md:mb-0">
+        <img class="h-8  lg:h-14" src="./Assignment 4_files/logo.png" alt="Logo">
+    </div>
+    <nav class="order-3 md:order-none w-full md:w-auto my-2 md:my-0">
+        <ul class="flex  text-center justify-center">
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Services</a></li>
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">About Us</a></li>
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Home</a></li>
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Contact</a></li>
+            <li class="px-2 md:px-4 py-2 md:py-0 hover:border-b-3 rounded-sm border-[#00c2b8] hover:text-[#00c2b8] hover:font-bold"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Log Out</a></li>
+        </ul>
+    </nav>
+    <div class="order-2 md:order-none bg-orange-600 h-10 w-10 md:h-12 md:w-12 flex justify-center items-center rounded-full text-white text-2xl md:text-3xl border-2 font-semibold border-[#00c2b8]">
+        <p class="ml-3 mb-2"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">m</a></p> 
+        <span class="relative flex size-3">
+            <span class="absolute inline-flex -translate-y-3.5 h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+            <span class="relative inline-flex -translate-y-3.5 size-3 rounded-full bg-sky-500"></span>
+        </span>
+    </div>
+</header>
+
+<!-- ----------------banner---------- -->
+
+<section class="bg-[url(./assets/banner.png)] bg-cover h-80 sm:h-105 md:h-140 lg:h-160 xl:h-[calc(100vh-96px)] grid grid-cols-2  text-white py-5 md:py-10 lg:py-20 xl:py-25
+px-5 md:px-12">
+    <div><h1 class="font-semibold text-[30px] sm:text-[50px] md:text-[60px] lg:text-[80px] xl:text-[100px]">Rediscover Youth,<span class="text-[#00c2b8]">Redefine <br>Life.</span></h1>
+    <p class="py-2 md:py-3 xl:py-5 text-[10px] sm:text-[13px] md:text-[15px] xl:text-[20px]">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero iscum cupiditate, illum quisquam consequuntur. Tempora possimus ipsum officiis distinctio similique. Sit reprehender pariatur aperiam distinctio? Assumenda laboriosam voluptas fuga?
+    </p>
+   <button class="bg-[#00c2b8] text-white py-2 px-2 xl:py-5 xl:px-6 rounded-full my-1 md:my-5 text-[12px] md:text-[15px] lg:text-[20px] xl:text-[25px] font-[600]"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Contuct Us</a> </button>
+</div>
+</section>
+<!-- -------------------relive--------------- -->
+
+<section class=" my-10 mx-6 sm:my-24 2xl:my-30 2xl:px-15 grid grid-cols-1 sm:grid-cols-2 items-center">
+    <div>
+<img class="min-w-full" src="./Assignment 4_files/MeetRelive.png" alt="">
+    </div>
+    <div class=" py-5 sm:pl-5 md:pl-9 lg:pl-9 2xl:px-20 ">
+<h2 class="text-[25px] sm:text-[40px] md:text-[50px] lg:text-[60px] 2xl:text-[90px] font-[600]">Meet <span class="text-[#00c2b8]">Relive</span></h2>
+<p class="text-[11px] sm:text-[13px] md:text-[15px] lg:text-[20px] 2xl:text-[28px]  md:py-3 lg:py-5 2xl:py-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ext cumque umenda deleniti at illo is a quibusdam! Aperiam, iure. Repellat, esse adipisci extral is tenetur, voluptatum facere inventore odit, totam cupiditate dolorum sit?</p>
+ <button class="bg-[#00c2b8] text-white py-2 px-2 xl:py-5 xl:px-6 rounded-full my-1  2xl:my-5 text-[12px] md:text-[15px] lg:text-[20px] xl:text-[25px] font-[600]"><a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Contuct Us</a> </button>
+    </div>
+</section>
+
+<!-- ----------------cart------------ -->
+ <section class="px-10">
+    <div class="flex-row justify-items-center">
+<h2 class="text-[30px] sm:text-[50px] md:text-[60px] lg:text-[70px] 2xl:text-[100px] font-[600]">Meet <span class="text-[#00c2b8]">Relive</span></h2>
+<p class="text-[11px] sm:text-[15px] md:text-[15px] lg:text-[18px] 2xl:text-[20px] text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex cumque assumenda deleniti at illo quibusdam! Aperiam. <br>Ex cumque assumenda deleniti at illo quibusdam! Aperiam.</p></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-5 sm:py-20  2xl:py-30">
+    
+    <div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./Assignment 4_files/immigrant.jpeg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+   <div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./Assignment 4_files/visa.jpg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+<div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./Assignment 4_files/tourist.jpeg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+<div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./Assignment 4_files/education.jpg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+<div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./Assignment 4_files/education.jpg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+<div class="border-1 border-[#00c2b8] rounded-xl md:h-175 lg:h-190">
+        <div class="h-70 sm:h-90 lg:h-80 2xl:h-95 border-1 border-[#00c2b8] rounded-xl">
+            <img class="rounded-2xl min-w-full min-h-full p-3" src="./Assignment 4_files/visa.jpg" alt="">
+        </div>
+        <div class="p-4 sm:p-8 md:p-8 "> 
+            <h3 class="text-[25px] sm:text-[28px] lg:text-[30px] font-[600]">Visa Process</h3>
+            <p class="text-[13px] sm:text-[15px] lg:text-[17px] py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim dolores in aliquid facilis molestias odio nisi voluptates ducimus labore, quas aliquam optio eius hic?</p>
+            <div class="rounded-full flex justify-center"> 
+                <button class="bg-[#00c2b8] px-20 md:w-70 lg:px-16 2xl:w-120 2xl:mt-6 font-[600] rounded-full text-[15px] md:text-[15px] lg:text-[20px] py-5  text-white">
+                    <a href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw#"><p>Pick A Date</p></a>
+                </button>
+            </div>
+        </div>
+</div>
+ </div></section>
+
+ <!-- ---------------treatments------------- -->
+  <section>
+    <div class=" flex-col justify-items-center">
+        <h2 class="text-[25px] sm:text-[40px] md:text-[50px] lg:text-[80px]  2xl:text-[90px] font-[600]">Our Sprcialized <span class="text-[#00c2b8]">Treatments</span></h2>
+        <p class="text-[11px] sm:text-[13px] md:text-[15px] lg:text-[20px] font-[600]">Perspiciatis enim dolores in aliquid facilis molestias</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-10 md:py-20 lg:py-25 px-8 md:px-20 lg:px-30">
+        <div class="shadow-2xl bg-[#f7f7f7] p-12 rounded-2xl">
+            <img class="h-22" src="./Assignment 4_files/pot.png" alt="">
+            <h3 class="text-[18px] sm:text-[22px] md:text-[25px] lg:text-[30px] font-[600] py-5">Peptide Therapy</h3>
+            <p class="text-[13px] sm:text-[18px] lg:text-[20px] font-[600]">Boost cellular regeneration and vitality.</p>
+            <a class="text-[#00c2b8] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] underline flex font-[600]" href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Learn More <img class="md:px-3  lg:p-4 h-12 sm:h-15 md:h-18 lg:h-25" src="./Assignment 4_files/arrow.png" alt=""></a>
+        </div>
+        <div class="shadow-2xl bg-[#f7f7f7] p-12 rounded-2xl">
+            <img class="h-22" src="./Assignment 4_files/harts.png" alt="">
+            <h3 class="text-[18px] sm:text-[22px] md:text-[25px] lg:text-[30px] font-[600] py-5">Peptide Therapy</h3>
+            <p class="text-[13px] sm:text-[18px] lg:text-[20px] font-[600]">Boost cellular regeneration and vitality.</p>
+            <a class="text-[#00c2b8] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] underline flex font-[600]" href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Learn More <img class="md:px-3  lg:p-4 h-12 sm:h-15 md:h-18 lg:h-25" src="./Assignment 4_files/arrow.png" alt=""></a>
+        </div>
+        <div class="shadow-2xl bg-[#f7f7f7] p-12 rounded-2xl">
+             <img class="h-22" src="./Assignment 4_files/sun.png" alt="">
+            <h3 class="text-[18px] sm:text-[22px] md:text-[25px] lg:text-[30px] font-[600] py-5">Peptide Therapy</h3>
+            <p class="text-[13px] sm:text-[18px] lg:text-[20px] font-[600]">Boost cellular regeneration and vitality.</p>
+            <a class="text-[#00c2b8] text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] underline flex font-[600]" href="https://shikhon00.github.io/tailwind-css-assignment/?fbclid=IwY2xjawLLkDlleHRuA2FlbQIxMABicmlkETA5MExFMUdBNFR2cXBYTTNFAR6BdpX9prg7RSBVe2naEbOcH5JK1TC_fSDJWblBaJQGEKn9owPwa5MGNJhbqw_aem_qhT-Csi0zN38AkvgFt54tw">Learn More <img class="md:px-3  lg:p-4 h-12 sm:h-15 md:h-18 lg:h-25" src="./Assignment 4_files/arrow.png" alt=""></a>
+        </div>
+        
+    </div>
+  </section>
+
+  <section>
+   
+  </section>
+
+</body></html>
